@@ -11,4 +11,8 @@
 .ui-dialog 
 {
   position:fixed;
+  height: auto;
+  background-color: aquamarine;
+  border-radius: 4px;
+  box-shadow: 0px 1px 4px rgb(0, 0, 0) inset;
 }
