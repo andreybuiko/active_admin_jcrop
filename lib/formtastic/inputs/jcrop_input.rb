@@ -3,7 +3,7 @@ module Formtastic
     class JcropableInput < ::Formtastic::Inputs::FileInput
       include Base
 
-      VALID_OPTIONS = [aspectRatio, minSize, maxSize, setSelect, bgColor, bgOpacity, boxWidth, boxHeight, onSelect, onChange, onRelease, showDimensions]
+      VALID_OPTIONS = {:aspectRatio, :minSize, :maxSize, :setSelect, :bgColor, :bgOpacity, :boxWidth, :boxHeight, :onSelect, :onChange, :onRelease, :showDimensions}
 
       def to_html
         input_wrapping do
