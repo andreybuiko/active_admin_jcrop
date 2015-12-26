@@ -3,8 +3,6 @@ module Formtastic
     class JcropableInput < ::Formtastic::Inputs::FileInput
       include Base
 
-      VALID_OPTIONS = {:aspectRatio, :minSize, :maxSize, :setSelect, :bgColor, :bgOpacity, :boxWidth, :boxHeight, :onSelect, :onChange, :onRelease, :showDimensions}
-
       def to_html
         input_wrapping do
           label_html <<
@@ -25,7 +23,7 @@ module Formtastic
 
       def jcrop_options
         options[:jcrop_options] ||= {}
-        options[:jcrop_options].assert_valid_keys(*VALID_OPTIONS)
+        options[:jcrop_options].assert_valid_keys(:aspectRatio, :minSize, :maxSize, :setSelect, :bgColor, :bgOpacity, :boxWidth, :boxHeight, :onSelect, :onChange, :onRelease, :showDimensions)
         options[:jcrop_options].reverse_merge!(setSelect: [0,0,100,100])
       end
 
